@@ -1,0 +1,64 @@
+/*
+
+front
+
+
+*/
+
+
+input[name="domain_name"]{
+	height: 60px;
+	background: #fff;
+	color:#000000;
+}
+
+.larger-fa{
+	font-size: 2em!important;
+}
+.hosting_option_filter{
+	padding:5px;
+}
+
+.title-top-forms{
+	text-align: center;
+	margin-top: 20px;
+}
+
+.error_form_line{
+	border:2px solid #890000;
+
+}
+.success_form_line{
+	border:2px solid #007800;
+}
+.total_to_be_paid{
+	font-weight: bolder;
+	font-size: 2em;
+}
+.domain-years-input{
+	height: 40px;
+	width: 60px;
+	background: #fff;
+	border:1px solid #f6f6f6;
+}
+
+#display_content_of_checkout_summary{
+  margin-bottom: 40px;
+}
+
+#display_content_of_checkout_summary table tr{
+	
+}
+#display_content_of_checkout_summary table tr td{
+	padding:10px;
+}
+
+#display_content_of_checkout_summary table tr th{
+	font-size: 1.4em;
+	font-weight: bolder;
+	padding:10px;
+}
+
+.fs-2em{
+	font-size: 2em!important;
+}

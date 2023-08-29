@@ -1,0 +1,969 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021 Kingsley Okpalaeke Paragon
+# This file is distributed under the same license as the Flutterwave Payment Solutions Plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: wave-gate 1.0\n"
+"Report-Msgid-Bugs-To: https://flutterwave.lightcodes.net/\n"
+"POT-Creation-Date: 2021-05-08 13:45+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: admin/WaveGate_WaveGateConfiguration.php:54
+msgid "Wave Gate Settings"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:98
+msgid "Flutterwave Payment Solution and Bill Payment Services Configuration"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:100
+msgid "If you do not have Flutterwave Account, Sign Up"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:100
+msgid "here"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:107
+msgid "Enable Flutterwave"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:119
+msgid "Enable Live Transactions"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:132
+msgid "Live Keys"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:134
+#: admin/WaveGate_WaveGateConfiguration.php:136
+#: admin/WaveGate_WaveGateConfiguration.php:157
+msgid "Public Key"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:140
+#: admin/WaveGate_WaveGateConfiguration.php:142
+#: admin/WaveGate_WaveGateConfiguration.php:163
+#: admin/WaveGate_WaveGateConfiguration.php:165
+msgid "Secret Key"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:146
+#: admin/WaveGate_WaveGateConfiguration.php:148
+#: admin/WaveGate_WaveGateConfiguration.php:169
+#: admin/WaveGate_WaveGateConfiguration.php:171
+msgid "Encryption Key"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:155
+msgid "Sandbox Keys"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:159
+msgid "Live Key"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:175
+msgid "Extras"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:180
+msgid "Enable Bills Payment"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:192
+msgid "Enable Digtal POS"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:202
+msgid "Customer Reward"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:205
+msgid "Enable Customer Reward"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:217
+#: admin/WaveGate_WaveGateConfiguration.php:219
+msgid "Airtime Point"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:223
+msgid "Other Bill Point"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:225
+msgid "Points for cables, electricity, Tolls etc Bills"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:233
+msgid "Select Point Currency"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:250
+msgid "Value of one Point"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:259
+msgid "Minimum Convertable Point"
+msgstr ""
+
+#: admin/WaveGate_WaveGateConfiguration.php:274
+msgid "Save"
+msgstr ""
+
+#: admin/AppHost_APHBillPaymentCategoryPage.php:29
+msgid "Bill Categories"
+msgstr ""
+
+#: admin/AppHost_APHBillPaymentCategoryPage.php:42
+msgid "Bills Payment Categories"
+msgstr ""
+
+#: admin/AppHost_APHBillPaymentCategoryPage.php:48
+#: admin/AppHost_APHBillsPage.php:375 admin/AppHost_APHBillsPage.php:412
+#: admin/AppHost_APHCurrencyPage.php:48
+#: front/AppHost_APHAllAjaxRequest.php:581
+msgid "Name"
+msgstr ""
+
+#: admin/AppHost_APHBillPaymentCategoryPage.php:48
+msgid "Type"
+msgstr ""
+
+#: admin/AppHost_APHBillPaymentCategoryPage.php:48
+#: front/AppHost_APHAllAjaxRequest.php:1123 front/AppHost_APHMyRewards.php:104
+msgid "Country"
+msgstr ""
+
+#: admin/AppHost_APHBillPaymentCategoryPage.php:48
+msgid "Background Color"
+msgstr ""
+
+#: admin/AppHost_APHBillPaymentCategoryPage.php:48
+msgid "Color"
+msgstr ""
+
+#: admin/AppHost_APHBillPaymentCategoryPage.php:48
+#: admin/AppHost_APHBillsPage.php:57 admin/AppHost_APHBillsPage.php:411
+#: admin/AppHost_APHCustomerRewardsPage.php:53
+#: admin/AppHost_APHDigitalPosPage.php:54
+#: front/AppHost_APHAllAjaxRequest.php:580 front/AppHost_APHMyBills.php:33
+#: front/AppHost_APHMyRewards.php:50
+msgid "Status"
+msgstr ""
+
+#: admin/AppHost_APHBillPaymentCategoryPage.php:95
+#: admin/AppHost_APHCurrencyPage.php:92
+msgid "Sucsess"
+msgstr ""
+
+#: admin/AppHost_APHBillPaymentCategoryPage.php:96
+#: admin/AppHost_APHCurrencyPage.php:66 admin/AppHost_APHCurrencyPage.php:93
+#: admin/AppHost_APHCustomerRewardsPage.php:65
+msgid "Yes"
+msgstr ""
+
+#: admin/AppHost_APHBillPaymentCategoryPage.php:97
+#: admin/AppHost_APHCurrencyPage.php:68 admin/AppHost_APHCurrencyPage.php:94
+#: admin/AppHost_APHCustomerRewardsPage.php:67
+msgid "No"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:34 admin/AppHost_APHBillsPage.php:52
+msgid "Bill Payments"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:57 admin/AppHost_APHBillsPage.php:375
+#: admin/AppHost_APHCustomerRewardsPage.php:53
+#: admin/AppHost_APHDigitalPosPage.php:54
+msgid "ID"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:57
+#: admin/AppHost_APHCustomerRewardsPage.php:53
+#: admin/AppHost_APHDigitalPosPage.php:54
+msgid "User"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:57 front/AppHost_APHMyBills.php:31
+msgid "Reference"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:57 front/AppHost_APHMyBills.php:32
+msgid "Bill Name"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:57 front/AppHost_APHMyBills.php:76
+msgid "You are using guest account, you need to create an account to have bills recorded"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:57
+msgid "Customer Identifier"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:57
+#: admin/AppHost_APHCustomerRewardsPage.php:53
+msgid "Service Amount"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:57
+msgid "Wave Message"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:57
+#: admin/AppHost_APHCustomerRewardsPage.php:53
+#: admin/AppHost_APHDigitalPosPage.php:54 front/AppHost_APHMyBills.php:30
+#: front/AppHost_APHMyRewards.php:47
+msgid "Date"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:96
+msgid "Bill payment list is empty"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:113 front/AppHost_APHPayBills.php:25
+msgid "Pay all your bills with ease"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:121 front/AppHost_APHPayBills.php:32
+msgid "Country:"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:191 front/AppHost_APHAllAjaxRequest.php:150
+#: front/AppHost_APHAllAjaxRequest.php:391
+msgid "Fill in your details and proceed"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:194 front/AppHost_APHAllAjaxRequest.php:153
+#: front/AppHost_APHAllAjaxRequest.php:394
+msgid "Could not complete this request, try again later"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:220 front/AppHost_APHAllAjaxRequest.php:252
+msgid "Phone number  is required"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:223 front/AppHost_APHAllAjaxRequest.php:255
+msgid "Smart card number  is required"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:226 front/AppHost_APHAllAjaxRequest.php:258
+msgid "Customer number  is required"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:234 front/AppHost_APHAllAjaxRequest.php:266
+msgid "Enter a valid amount"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:244 front/AppHost_APHAllAjaxRequest.php:196
+#: front/AppHost_APHAllAjaxRequest.php:276
+msgid ""
+"The currency which determines the price of this item is not active on our "
+"store. Try again later or contact our support team"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:250 front/AppHost_APHAllAjaxRequest.php:202
+#: front/AppHost_APHAllAjaxRequest.php:282
+msgid ""
+"The currency which determines the price of this item is not properly loaded, "
+"contact support"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:258 front/AppHost_APHAllAjaxRequest.php:289
+msgid "Invalid account selected for order, select a valid account"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:268 front/AppHost_APHAllAjaxRequest.php:299
+msgid ""
+"Could not validate this billing request ensure that the fields are properly "
+"filled"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:296 front/AppHost_APHAllAjaxRequest.php:326
+msgid "Internal Error, bill payment request failed, try again later"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:300 front/AppHost_APHAllAjaxRequest.php:330
+msgid "Internal Error, could not generate cart"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:345
+msgid "Bill Payment completed successfully"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:348
+msgid "Could not complete bill payment. "
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:375 front/AppHost_APHAllAjaxRequest.php:1087
+msgid "Email"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:375
+msgid "Select"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:391
+msgid "No Customer found, update the search term and search again"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:394
+msgid "User search completed successfully"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:407 front/AppHost_APHAllAjaxRequest.php:576
+msgid "Criteria"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:407 front/AppHost_APHAllAjaxRequest.php:576
+msgid "Information"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:413 front/AppHost_APHAllAjaxRequest.php:582
+msgid "Customer"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:414 admin/AppHost_APHBillsPage.php:464
+#: admin/AppHost_APHBillsPage.php:530 admin/AppHost_APHBillsPage.php:593
+#: admin/AppHost_APHBillsPage.php:686 admin/AppHost_APHBillsPage.php:751
+#: admin/AppHost_APHBillsPage.php:809 admin/AppHost_APHBillsPage.php:871
+#: admin/AppHost_APHDigitalPosPage.php:54
+#: admin/AppHost_APHDigitalPosPage.php:135
+#: front/AppHost_APHAllAjaxRequest.php:583
+#: front/AppHost_APHAllAjaxRequest.php:620
+#: front/AppHost_APHAllAjaxRequest.php:674
+#: front/AppHost_APHAllAjaxRequest.php:723
+#: front/AppHost_APHAllAjaxRequest.php:805
+#: front/AppHost_APHAllAjaxRequest.php:861
+#: front/AppHost_APHAllAjaxRequest.php:908
+#: front/AppHost_APHAllAjaxRequest.php:959 front/AppHost_APHMyBills.php:33
+msgid "Amount"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:416 front/AppHost_APHAllAjaxRequest.php:585
+msgid "Confirm"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:434 admin/AppHost_APHBillsPage.php:721
+#: front/AppHost_APHAllAjaxRequest.php:603
+#: front/AppHost_APHAllAjaxRequest.php:842
+msgid "Network Provider"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:452 admin/AppHost_APHBillsPage.php:519
+#: admin/AppHost_APHBillsPage.php:581 admin/AppHost_APHBillsPage.php:675
+#: admin/AppHost_APHBillsPage.php:740 admin/AppHost_APHBillsPage.php:799
+#: admin/AppHost_APHBillsPage.php:859
+msgid "Search Users:"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:458 admin/AppHost_APHBillsPage.php:525
+#: admin/AppHost_APHBillsPage.php:587 admin/AppHost_APHBillsPage.php:681
+#: admin/AppHost_APHBillsPage.php:746 admin/AppHost_APHBillsPage.php:805
+#: admin/AppHost_APHBillsPage.php:865 admin/AppHost_APHDigitalPosPage.php:121
+msgid "Select User"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:469 front/AppHost_APHAllAjaxRequest.php:625
+msgid "Phone Number"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:474 admin/AppHost_APHBillsPage.php:540
+#: admin/AppHost_APHBillsPage.php:605 admin/AppHost_APHBillsPage.php:700
+#: admin/AppHost_APHBillsPage.php:761 admin/AppHost_APHBillsPage.php:819
+#: admin/AppHost_APHBillsPage.php:878 front/AppHost_APHAllAjaxRequest.php:630
+#: front/AppHost_APHAllAjaxRequest.php:684
+#: front/AppHost_APHAllAjaxRequest.php:735
+#: front/AppHost_APHAllAjaxRequest.php:819
+#: front/AppHost_APHAllAjaxRequest.php:871
+#: front/AppHost_APHAllAjaxRequest.php:918
+#: front/AppHost_APHAllAjaxRequest.php:966
+msgid "Proceed"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:497 front/AppHost_APHAllAjaxRequest.php:653
+msgid "Cable Provider"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:535 front/AppHost_APHAllAjaxRequest.php:679
+msgid "SmartCard Number"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:562 front/AppHost_APHAllAjaxRequest.php:706
+msgid "Select Electricity Provider"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:598 front/AppHost_APHAllAjaxRequest.php:728
+msgid "Meter Number"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:611 front/AppHost_APHAllAjaxRequest.php:741
+msgid "Preview"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:657 front/AppHost_APHAllAjaxRequest.php:787
+msgid "Select NetWork & Data"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:695 front/AppHost_APHAllAjaxRequest.php:814
+#: front/AppHost_APHMyRewards.php:121
+msgid "Mobile Number"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:756 front/AppHost_APHAllAjaxRequest.php:866
+msgid "Account Number"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:781 front/AppHost_APHAllAjaxRequest.php:891
+msgid "Toll Location"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:814 front/AppHost_APHAllAjaxRequest.php:913
+msgid "Lcc Number"
+msgstr ""
+
+#: admin/AppHost_APHBillsPage.php:839 front/AppHost_APHAllAjaxRequest.php:938
+msgid "Select Government Bill"
+msgstr ""
+
+#: admin/AppHost_APHCurrencyPage.php:30 admin/AppHost_APHCurrencyPage.php:42
+msgid "Currencies"
+msgstr ""
+
+#: admin/AppHost_APHCurrencyPage.php:30
+msgid "Bill Currencies"
+msgstr ""
+
+#: admin/AppHost_APHCurrencyPage.php:48
+msgid "Code"
+msgstr ""
+
+#: admin/AppHost_APHCurrencyPage.php:48
+msgid "Sign"
+msgstr ""
+
+#: admin/AppHost_APHCurrencyPage.php:48
+#: admin/AppHost_APHCustomerRewardsPage.php:53
+msgid "Active"
+msgstr ""
+
+#: admin/AppHost_APHCurrencyPage.php:48
+msgid "Conversion Rate"
+msgstr ""
+
+#: admin/AppHost_APHCurrencyPage.php:48
+msgid "Is Default"
+msgstr ""
+
+#: admin/AppHost_APHCurrencyPage.php:114
+msgid "Error! Currency id is required"
+msgstr ""
+
+#: admin/AppHost_APHCurrencyPage.php:118
+msgid "Rate most be greater than zero"
+msgstr ""
+
+#: admin/AppHost_APHCurrencyPage.php:138
+msgid ""
+"Set another currency as default and the old default currency will no longer "
+"be the default currency."
+msgstr ""
+
+#: admin/AppHost_APHCustomerRewardsPage.php:29
+#: admin/AppHost_APHCustomerRewardsPage.php:47
+msgid "Customer Rewards"
+msgstr ""
+
+#: admin/AppHost_APHCustomerRewardsPage.php:53
+#: front/AppHost_APHMyRewards.php:48
+msgid "Credit"
+msgstr ""
+
+#: admin/AppHost_APHCustomerRewardsPage.php:53
+#: front/AppHost_APHMyRewards.php:49
+msgid "Debit"
+msgstr ""
+
+#: admin/AppHost_APHCustomerRewardsPage.php:53
+msgid "Comment"
+msgstr ""
+
+#: admin/AppHost_APHCustomerRewardsPage.php:79
+msgid "Approve"
+msgstr ""
+
+#: admin/AppHost_APHCustomerRewardsPage.php:91
+msgid "Customer points list is empty"
+msgstr ""
+
+#: admin/AppHost_APHCustomerRewardsPage.php:125
+msgid "Invalid Point object"
+msgstr ""
+
+#: admin/AppHost_APHCustomerRewardsPage.php:131
+msgid "This reward is not pending, check and try again"
+msgstr ""
+
+#: admin/AppHost_APHCustomerRewardsPage.php:139
+msgid "Point successfully Processed"
+msgstr ""
+
+#: admin/AppHost_APHCustomerRewardsPage.php:142
+msgid "Could not complete this request. Try again later"
+msgstr ""
+
+#: admin/AppHost_APHDigitalPosPage.php:29
+#: admin/AppHost_APHDigitalPosPage.php:49
+msgid "Digital POS"
+msgstr ""
+
+#: admin/AppHost_APHDigitalPosPage.php:54
+#: admin/AppHost_APHDigitalPosPage.php:126
+msgid "Payment Description"
+msgstr ""
+
+#: admin/AppHost_APHDigitalPosPage.php:54
+msgid "Payment URL"
+msgstr ""
+
+#: admin/AppHost_APHDigitalPosPage.php:67
+msgid "Copy Link"
+msgstr ""
+
+#: admin/AppHost_APHDigitalPosPage.php:87
+msgid "Digital POS list is empty"
+msgstr ""
+
+#: admin/AppHost_APHDigitalPosPage.php:107
+msgid "Generate Digital POS Payment URL"
+msgstr ""
+
+#: admin/AppHost_APHDigitalPosPage.php:116
+msgid "Search User"
+msgstr ""
+
+#: admin/AppHost_APHDigitalPosPage.php:141
+msgid "Select Currency"
+msgstr ""
+
+#: admin/AppHost_APHDigitalPosPage.php:159
+msgid "Generate Payment URL"
+msgstr ""
+
+#: admin/AppHost_APHDigitalPosPage.php:192
+msgid "Payment description is required"
+msgstr ""
+
+#: admin/AppHost_APHDigitalPosPage.php:199
+msgid "Select a customer"
+msgstr ""
+
+#: admin/AppHost_APHDigitalPosPage.php:205
+msgid "Select currency from the list"
+msgstr ""
+
+#: admin/AppHost_APHDigitalPosPage.php:211
+msgid "Ensure that amount is greater than zero"
+msgstr ""
+
+#: admin/AppHost_APHDigitalPosPage.php:217
+msgid "The request token is invalid, try again later"
+msgstr ""
+
+#: admin/AppHost_APHDigitalPosPage.php:236
+msgid "Payment url generated successfully"
+msgstr ""
+
+#: admin/AppHost_APHDigitalPosPage.php:239
+#: admin/AppHost_APHDigitalPosPage.php:243
+msgid "Could not generate payment url, try again later. "
+msgstr ""
+
+#: admin/AppHost_APHDigitalPosPage.php:250
+#, php-format
+msgid "Payment request from %s for "
+msgstr ""
+
+#: admin/AppHost_APHDigitalPosPage.php:250
+msgid "Pay Now"
+msgstr ""
+
+#: core/AppHost_APHCommerce.php:45
+msgid "Flutterwave Payment Solutions"
+msgstr ""
+
+#: core/AppHost_APHCommerce.php:46
+msgid ""
+"Flutterwave Payment Solutions have a total of 12 supported payment methods, "
+"making it possible for anyone to pay you from anywhere in the world"
+msgstr ""
+
+#: core/AppHost_APHCommerce.php:47
+msgid "Pay Via Flutterwave"
+msgstr ""
+
+#: core/AppHost_APHCommerce.php:66
+msgid "Enable/Disable"
+msgstr ""
+
+#: core/AppHost_APHCommerce.php:68
+msgid "Enable Checkout Via Flutterwave"
+msgstr ""
+
+#: core/AppHost_APHCommerce.php:72
+msgid " Title"
+msgstr ""
+
+#: core/AppHost_APHCommerce.php:74
+msgid "The title shown in list of payment options at checkout."
+msgstr ""
+
+#: core/AppHost_APHCommerce.php:75
+msgid "Flutterwave Payment Solution"
+msgstr ""
+
+#: core/AppHost_APHCommerce.php:81
+#, php-format
+msgid ""
+"Flutterwave payment solution provides many payment gateways for easy "
+"checkout. This plugins give you opportunity to use all the possible options "
+"Flutterwave provides and also provides you with opportunity to sell digital "
+"products through your Wordpress website/blog. Go to this link <a href=\"%s"
+"\">for further settings </a> "
+msgstr ""
+
+#: core/AppHost_APHCommerce.php:110
+msgid "Flutterwave Payment In Progress"
+msgstr ""
+
+#: core/AppHost_APHCommerce.php:119
+msgid "Payment error: Could not generate payment url from flutterwave"
+msgstr ""
+
+#: core/AppHost_APHValidator.php:38
+msgid "Invalid transaction information"
+msgstr ""
+
+#: core/AppHost_APHValidator.php:43
+msgid "Transaction cancelled by customer"
+msgstr ""
+
+#: core/AppHost_APHValidator.php:58
+msgid "Order not recorded on the this store, perform actual order"
+msgstr ""
+
+#: core/AppHost_APHValidator.php:63
+msgid ""
+"This order is completed, check through your bill payment history for more "
+"information"
+msgstr ""
+
+#: core/AppHost_APHValidator.php:68
+msgid "Incomplete Payment response from payment gateway"
+msgstr ""
+
+#: core/AppHost_APHValidator.php:79
+msgid "No Valid Customer found for this order"
+msgstr ""
+
+#: core/AppHost_APHValidator.php:84
+msgid "This order has no valid store currency, try again later"
+msgstr ""
+
+#: core/AppHost_APHValidator.php:103
+msgid "Payment completed via Flutterwave Payment Solutions"
+msgstr ""
+
+#: core/AppHost_APHValidator.php:110
+msgid "Payment completed succesfully, check your email/phone for details"
+msgstr ""
+
+#: core/AppHost_APHValidator.php:117
+msgid "Error occured during order processing "
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:35
+msgid ""
+"Error Occured, could not complete this payment request, try again, if this "
+"persists, use another payment option"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:94
+msgid "Redirecting to the payment gateway website to complete your order"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:109
+msgid "Redirecting to payment gateway to complete your order"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:179
+msgid "You need to be logged in to access this page, try again later"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:188
+msgid "You do not have enough points to complete this request"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:207
+msgid ""
+"This currency is not active and reward conversion cannot continue, try again "
+"later"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:216
+#, php-format
+msgid ""
+"%s is the only supported currency for point conversion, select bill payment "
+"service in this currency"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:220
+msgid ""
+"Cannot change the point currency. Select airtime from another country that "
+"is supported"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:228
+#, php-format
+msgid "Point to airtime converion Total Points: %d"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:232
+msgid "Your reward points to airtime conversion has been submited for approval"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:237
+msgid ""
+"Could not complete this request. Ensure your reward points is greater or "
+"equal to  "
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:353
+msgid "payment url ready for payment"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:382
+msgid "Country is required"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:414
+msgid "Email, Username and Password, must be provided"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:420
+msgid "Agree to our Terms and Conditions of service"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:427
+msgid "Required form field is missing"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:431
+msgid "Username too short. At least 4 characters is required"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:435
+msgid "Sorry, that username already exists!"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:439
+msgid "Sorry, the username you entered is not valid"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:443
+msgid "Password length must be greater than 4"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:447
+msgid "Email is not valid"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:451
+msgid "Email Already in use"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:496
+#: front/AppHost_APHAllAjaxRequest.php:497
+msgid "Registration complete, You can login and explore your account"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:500
+msgid "Unknow error occured, try gain"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:516
+msgid "Username is required"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:530
+msgid "Password is required"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:549
+msgid "Invalid Login details, Please check and try again"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:556
+#: front/AppHost_APHAllAjaxRequest.php:557
+msgid "Login Successful"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:561
+msgid "Could not complete the login process, try again later"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:767
+msgid "Select Network"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:995
+msgid "Login Or Create an account with us, it will only take few seconds"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:1002
+msgid "Register"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:1014
+#: front/AppHost_APHAllAjaxRequest.php:1052
+msgid "Username"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:1024
+#: front/AppHost_APHAllAjaxRequest.php:1059
+msgid "Password"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:1035
+msgid "Login"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:1069
+msgid "Firstname"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:1076
+msgid "Lastname"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:1095
+msgid "Phone number"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:1105
+msgid "Address"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:1113
+msgid "City"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:1131
+msgid "Postal Code"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:1141
+msgid "I Agree To Terms & Conditions"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:1158
+msgid "Create Account"
+msgstr ""
+
+#: front/AppHost_APHAllAjaxRequest.php:1176
+msgid "Register or Login"
+msgstr ""
+
+#: front/AppHost_APHMyBills.php:23 inc/AppHost_APHActivation.php:64
+msgid "My Bills"
+msgstr ""
+
+#: front/AppHost_APHMyBills.php:33
+msgid "Customer Identitier"
+msgstr ""
+
+#: front/AppHost_APHMyBills.php:33
+msgid "Provider Message"
+msgstr ""
+
+#: front/AppHost_APHMyBills.php:72
+msgid "You do not have bill payments yet"
+msgstr ""
+
+#: front/AppHost_APHMyRewards.php:29 inc/AppHost_APHActivation.php:68
+msgid "My Rewards"
+msgstr ""
+
+#: front/AppHost_APHMyRewards.php:34
+msgid "Points:"
+msgstr ""
+
+#: front/AppHost_APHMyRewards.php:36
+msgid "Value:"
+msgstr ""
+
+#: front/AppHost_APHMyRewards.php:51
+msgid "Comments"
+msgstr ""
+
+#: front/AppHost_APHMyRewards.php:80
+msgid "You do not have bill payments points yet"
+msgstr ""
+
+#: front/AppHost_APHMyRewards.php:80
+msgid "You are using a guest account, create account to enjoy the benefits of our reward system."
+msgstr ""
+
+
+#: front/AppHost_APHMyRewards.php:96
+msgid "Points To Airtime"
+msgstr ""
+
+#: front/AppHost_APHMyRewards.php:97
+msgid "Start Points Conversion"
+msgstr ""
+
+#: front/AppHost_APHMyRewards.php:106
+msgid "Nigeria"
+msgstr ""
+
+#: front/AppHost_APHMyRewards.php:107
+msgid "Ghana"
+msgstr ""
+
+#: front/AppHost_APHMyRewards.php:108
+msgid "United States"
+msgstr ""
+
+#: front/AppHost_APHMyRewards.php:109
+msgid "Kenya"
+msgstr ""
+
+#: front/AppHost_APHMyRewards.php:110
+msgid "Uganda"
+msgstr ""
+
+#: front/AppHost_APHMyRewards.php:125
+msgid "Convert Points"
+msgstr ""
+
+#: inc/AppHost_APHActivation.php:60
+msgid "Pay Bills"
+msgstr ""
+
+#: inc/AppHost_APHActivation.php:72
+msgid "Notifications"
+msgstr ""
+
+#: shortcode/AppHost_APHShortcode.php:47 shortcode/AppHost_APHShortcode.php:58
+#: shortcode/AppHost_APHShortcode.php:68
+msgid "This feature is currently disabled"
+msgstr ""

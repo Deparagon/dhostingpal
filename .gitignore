@@ -1,0 +1,16 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+#!.htaccess
+#!wp-config.php
+# etc...
+
+# ...even if they are in subdirectories
+#!*/
+
+# if the files to be tracked are in subdirectories
+!*/wp-content/plugins/apphosting/*
+!*/wp-content/themes/app-hosting/*
+

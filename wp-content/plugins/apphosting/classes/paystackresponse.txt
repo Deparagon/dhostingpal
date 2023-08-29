@@ -1,0 +1,140 @@
+stdClass Object
+(
+    [status] => 1
+    [message] => Verification successful
+    [data] => stdClass Object
+        (
+            [id] => 3016723854
+            [domain] => test
+            [status] => success
+            [reference] => DHPBJ8AS7N9404Z078C5
+            [receipt_number] => 
+            [amount] => 516000
+            [message] => 
+            [gateway_response] => Successful
+            [paid_at] => 2023-08-10T16:19:55.000Z
+            [created_at] => 2023-08-10T16:19:34.000Z
+            [channel] => card
+            [currency] => NGN
+            [ip_address] => 105.113.18.2
+            [metadata] => 
+            [log] => stdClass Object
+                (
+                    [start_time] => 1691684382
+                    [time_spent] => 14
+                    [attempts] => 1
+                    [errors] => 0
+                    [success] => 1
+                    [mobile] => 
+                    [input] => Array
+                        (
+                        )
+
+                    [history] => Array
+                        (
+                            [0] => stdClass Object
+                                (
+                                    [type] => action
+                                    [message] => Attempted to pay with card
+                                    [time] => 13
+                                )
+
+                            [1] => stdClass Object
+                                (
+                                    [type] => success
+                                    [message] => Successfully paid with card
+                                    [time] => 14
+                                )
+
+                        )
+
+                )
+
+            [fees] => 17740
+            [fees_split] => 
+            [authorization] => stdClass Object
+                (
+                    [authorization_code] => AUTH_r5uqk6ms1u
+                    [bin] => 408408
+                    [last4] => 4081
+                    [exp_month] => 12
+                    [exp_year] => 2030
+                    [channel] => card
+                    [card_type] => visa 
+                    [bank] => TEST BANK
+                    [country_code] => NG
+                    [brand] => visa
+                    [reusable] => 1
+                    [signature] => SIG_E9Dm0xnHympDeLlwpgM6
+                    [account_name] => 
+                )
+
+            [customer] => stdClass Object
+                (
+                    [id] => 295379
+                    [first_name] => Kingsley
+                    [last_name] => Paragon
+                    [email] => cmasterpg7@gmail.com
+                    [customer_code] => CUS_kkqyh3pe61n1imt
+                    [phone] => 
+                    [metadata] => stdClass Object
+                        (
+                            [photos] => Array
+                                (
+                                    [0] => stdClass Object
+                                        (
+                                            [type] => facebook
+                                            [typeId] => facebook
+                                            [typeName] => Facebook
+                                            [url] => https://d2ojpxxtu63wzl.cloudfront.net/static/84c515d63d367ca478f173b3b5216266_744dda8d46d94428f910f3c52497996b34ffc36f69148582bd63b902191a29fb
+                                            [isPrimary] => 1
+                                        )
+
+                                    [1] => stdClass Object
+                                        (
+                                            [type] => twitter
+                                            [typeId] => twitter
+                                            [typeName] => Twitter
+                                            [url] => https://d2ojpxxtu63wzl.cloudfront.net/static/b9a884ad190e21d4b4b5a327919c4159_b3371935e78113b874fb6eb4e47c172a09bafa609cd703b120ffd532f6e1177e
+                                        )
+
+                                    [2] => stdClass Object
+                                        (
+                                            [type] => google
+                                            [typeId] => google
+                                            [typeName] => GooglePlus
+                                            [url] => https://d2ojpxxtu63wzl.cloudfront.net/static/06aabbfcdb4a0dd10189bd4d1d3017f7_da65472951570059fe286da264e4e0ca1d9bc82a977148dc3682a5e47a83f015
+                                        )
+
+                                )
+
+                        )
+
+                    [risk_action] => default
+                    [international_format_phone] => 
+                )
+
+            [plan] => 
+            [split] => stdClass Object
+                (
+                )
+
+            [order_id] => 
+            [paidAt] => 2023-08-10T16:19:55.000Z
+            [createdAt] => 2023-08-10T16:19:34.000Z
+            [requested_amount] => 516000
+            [pos_transaction_data] => 
+            [source] => 
+            [fees_breakdown] => 
+            [transaction_date] => 2023-08-10T16:19:34.000Z
+            [plan_object] => stdClass Object
+                (
+                )
+
+            [subaccount] => stdClass Object
+                (
+                )
+
+        )
+
+)

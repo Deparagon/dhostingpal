@@ -1,0 +1,1 @@
+ALTER TABLE PREFIX_AppHost_APH_categories ADD `bg_img` varchar(255) NULL AFTER `bg`;

@@ -1,0 +1,222 @@
+/**
+ * DESCRIPTION.
+ *
+ * Flutterwave Payment Solutions
+ *
+ *  @author    Kingsley Paragon
+ *  @copyright 2021 Kingsley Paragon
+ *  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License ("AFL") v. 3.0
+ */
+.card .card-header{
+padding: 10px 2.25rem !important;
+}
+.text-center{
+  text-align: center;
+}
+.with-max-height290{
+  max-height: 290px;
+}
+#wpcontent{
+  background: #F0F0F1;
+}
+
+#wpfooter{
+  position: fixed !important;
+}
+
+.admin-main-container-wave{
+  margin-top:5px;
+  padding: 12px;
+}
+
+.translated_feew{
+  display: none;
+}
+
+.button_open_new_c_form{
+  float:right;
+}
+
+.admin-main-container-wave .form-group{
+   margin-top:20px;
+}
+
+#proceed_to_purchase_code{
+  margin-top: 20px;
+}
+.admin-main-container-wave .row{
+  padding: 0;
+  margin: 0;
+}
+
+.wp-core-ui select{
+  max-width: 100%!important;
+}
+.color-showcase{
+  width: 32px;
+  height: 40px;
+  border:1px solid #d1d1d1;
+  float: left;
+}
+
+
+.copy_input_text_content_class{
+ position: absolute;
+ top: -2000000px;
+}
+
+.form-control-mid{
+  width: 100px;
+  height: 40px;
+  margin-right: 10px;
+  float: left;
+}
+
+.table.table-bordered.dataTable{
+  border: 1px solid #d1d1d1;
+}
+.free_on_t_btn{
+  margin-top: 5px;
+}
+.admin-main-container-wave .card{
+  padding: 0!important;
+   width: 100%;
+   max-width: 100%;
+}
+
+.bg-white{
+  background: #fff;
+  color:#000;
+}
+
+.green-icon{
+  color:#090;
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+}
+.red-icon{
+  color:#e00;
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+}
+.card-header{
+  font-weight: bolder;
+  font-size: 1.6em;
+}
+.cls{
+  clear: both;
+}
+
+.right_side_alert_message{
+  position: fixed;
+  right: 5px;
+  top:40%;
+  width: 120px;
+  z-index: 99;
+}
+
+.tiny_image{
+	width: 80px;
+	height: auto;
+}
+
+tr.home_category td{
+	background: #07944b;
+	color:#fff;
+}
+
+.p-title{
+  padding-top: 8px !important;
+  background: #fff !important;
+  padding-bottom: 8px !important;
+}
+
+
+.flexy-boxy-container{
+   /*flex-flow: row wrap;*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items:stretch;
+  align-content:space-between;
+}
+
+
+@media (min-width: 768px){
+.each-pay-boxy{
+  flex-grow: 1;
+  flex-basis:auto;
+  width: 28%;
+  border:1px solid #fff;
+  border-radius: 10px;
+  margin-right: 2%;
+  padding: 30px 15px 30px 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+
+
+}
+}
+
+
+@media (max-width: 767px){
+.each-pay-boxy{
+  flex-grow: 1;
+  flex-basis:auto;
+  width: 48%;
+  border:1px solid #fff;
+  border-radius: 10px;
+  margin-right: 2%;
+  padding: 30px 15px 30px 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+
+
+}
+
+}
+
+
+.each-pay-boxy h4, .each-pay-boxy p{
+  text-align: center;
+  color:#fff;
+}
+
+.display_none{
+  display: none !important;
+}
+
+
+.product_related_search{
+  margin-top: 30px;
+}
+
+.apply_discount_details{
+  margin-top: 25px;
+}
+
+.each_customer_account{
+  margin-left: 15px !important;
+}
+.form-group-container{
+  display: none;
+}
+
+.data_picker_form{
+  margin-top: 25px;
+}
+.active_img{
+  background-color: #f1f1f1;
+}
+
+.list-tin-img img{
+  width: 60px;
+  height: 60px;
+}
+.holding_background_image{
+  height: 80px;
+  overflow-y: scroll;
+}
