@@ -56,12 +56,8 @@ class APHConfiguration
     public function ConfigurationContent()
     {
         require_once plugin_dir_path(dirname(__FILE__)).'classes/APHCurrency.php';
-        require_once plugin_dir_path(dirname(__FILE__)).'core/APHFunction.php';
         $cobj = new APHCurrency();
 
-        $install = new APHFunction();
-
-        $install->installUsers();
         $currencies = $cobj->getActiveCurrencies();
 
         $APP_HOST_ENABLE = esc_html(get_option('APP_HOST_ENABLE'));
