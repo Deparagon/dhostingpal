@@ -105,8 +105,7 @@ class APHFunction
 
     public function getClients()
     {
-        
-           return ();
+        return array();
     }
 }
 
