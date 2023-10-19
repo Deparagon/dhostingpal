@@ -12,6 +12,8 @@
         <meta property="og:url" content="https://domainhostingpal.com" />
         <meta property="og:site_name" content="Domain Hosting pal | Domain" />
 
+       <link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/img/favicon.ico" />
+
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
         <!--end::Fonts-->
         <!--begin::Vendor Stylesheets(used for this page only)-->

@@ -98,6 +98,20 @@ class APHCountry extends APHModel
     }
 
 
+   public function idByCode($code)
+   {
+       global $wpdb;
+       $sql = $wpdb->prepare("SELECT id_country FROM $this->table WHERE code = %s ", $code);
+       return $wpdb->get_var($sql);
+   }
+
+
+   public static function getIDByCode($code)
+   {
+       return (new self())->idByCode($code);
+   }
+
+
    public function codeById($id)
    {
        global $wpdb;

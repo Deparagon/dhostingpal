@@ -9,7 +9,7 @@
 
 # ...even if they are in subdirectories
 #!*/
-
+.htaccess
 # if the files to be tracked are in subdirectories
 !*/wp-content/plugins/apphosting/*
 !*/wp-content/themes/app-hosting/*

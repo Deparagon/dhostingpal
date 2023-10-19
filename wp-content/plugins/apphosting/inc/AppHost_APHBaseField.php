@@ -43,7 +43,16 @@ class AppHost_APHBaseField
 
 
             if ($filetype =='js') {
-                wp_enqueue_script($fileInfo->getBasename(), $location.$fileInfo->getFilename(), array('jquery'), '', true);
+                //echo $fileInfo->getBasename().'<br>';
+
+                file_put_contents(dirname(__FILE__).'/thefile.txt', $fileInfo->getBasename()."\n\n", FILE_APPEND);
+
+                $loadfirst = array('jquery');
+
+                if ($fileInfo->getBasename() =='wwwadmin.js') {
+                    $loadfirst = array('jquery', 'scripts.bundle.js-js','plugins.bundle.js-js','widgets.bundle.js-js','back.js-js');
+                }
+                wp_enqueue_script($fileInfo->getBasename(), $location.$fileInfo->getFilename(), $loadfirst, '', true);
             } elseif ($filetype =='css') {
                 wp_enqueue_style($fileInfo->getBasename(), $location.$fileInfo->getFilename(), array(), $this->getVersion(), 'All');
             } elseif ($filetype =='php') {

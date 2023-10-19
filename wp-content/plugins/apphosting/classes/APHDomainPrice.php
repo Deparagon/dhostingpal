@@ -10,6 +10,7 @@
  */
 
 require_once 'APHModel.php';
+require_once 'APHDomain.php';
 class APHDomainPrice extends APHModel
 {
     public $id_price;

@@ -216,7 +216,7 @@ $('body').on('submit', '#ap_create_ticket_form', function(ev){
  	  dataType:'json',
  	  data: fdata,
 	  processData: false,
-        contentType: false,
+      contentType: false,
  	  success:function(report){
       if(report.status =='OK'){
  	   popNotification(report.message, 'success', 'OK');
