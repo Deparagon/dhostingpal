@@ -13,7 +13,6 @@ class APHFunction
         add_action('after_setup_theme', array($this, 'removeBarAction'));
         add_filter('wp_mail', array($this, 'doEmailLoginProcess'));
         add_action('init', array($this, 'redirectToNewLoginPage'));
-        //$this->installUsers();
     }
 
 
@@ -62,6 +61,8 @@ class APHFunction
         } else {
             $userdata['last_name'] = $data['lastname'];
         }
+
+        $password = $data['uuid'];
 
 
         if ($data['phonenumber']!='') {
