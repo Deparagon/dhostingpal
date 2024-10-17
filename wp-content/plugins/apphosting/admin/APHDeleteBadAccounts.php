@@ -20,7 +20,7 @@ class APHDeleteBadAccounts
     }
 
 
-        public function messageLogMenu()
+        public function messageWasteAccount()
         {
             add_submenu_page('apphosting_settings', 'Account Waster', 'Spam Account Waster', 'manage_options', 'aph_wastespam', array($this, 'thePage'), 1);
         }
