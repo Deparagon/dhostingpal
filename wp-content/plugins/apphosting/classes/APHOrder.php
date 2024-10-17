@@ -76,6 +76,23 @@ class APHOrder extends APHModel
     }
 
 
+    public function myOwn($id)
+    {
+        global $wpdb;
+        $sql = $wpdb->prepare("SELECT o.*, d.name AS domain_name, p.name AS plan_name, app_type, plan_type FROM $this->table o  INNER JOIN ".$wpdb->prefix."plans p ON p.id_plan = o.id_plan INNER JOIN ".$wpdb->prefix."domains d ON d.id_domain = o.id_domain WHERE user_id = %d", $id);
+        return $wpdb->get_results($sql, OBJECT);
+    }
+
+
+
+     public function totalSpent($user_id)
+     {
+         global $wpdb;
+         $sql = $wpdb->prepare("SELECT SUM(order_total) FROM $this->table WHERE user_id = %d", $user_id);
+         return  $wpdb->get_var($sql);
+     }
+
+
 
 
     public function requiredFields()

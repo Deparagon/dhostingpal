@@ -105,7 +105,7 @@ $countordes = $insorder->countAll();
 											<!--begin::Menu item-->
 											<div class="menu-item">
 												<!--begin::Menu link-->
-												<a class="menu-link nav-link py-3 px-4 px-xxl-6" href="#achievements" data-kt-scroll-toggle="true" data-kt-drawer-dismiss="true">Domain Search</a>
+												<a class="menu-link nav-link py-3 px-4 px-xxl-6" href="#domainregistration" data-kt-scroll-toggle="true" data-kt-drawer-dismiss="true">Domain Search</a>
 												<!--end::Menu link-->
 											</div>
 											<!--end::Menu item-->
@@ -366,7 +366,7 @@ $countordes = $insorder->countAll();
 					<!--begin::Container-->
 					<div class="container">
 						<!--begin::Heading-->
-						<div class="text-center mt-15 mb-18" id="achievements" data-kt-scroll-offset="{default: 100, lg: 150}">
+						<div class="text-center mt-15 mb-18" id="domainregistration" data-kt-scroll-offset="{default: 100, lg: 150}">
 							<!--begin::Title-->
 							<h3 class="fs-2hx text-white fw-bold mb-5">DHP, Loved by Many </h3>
 							<!--end::Title-->
@@ -651,7 +651,8 @@ $countordes = $insorder->countAll();
 								<!--end::Title-->
 							</div>
 							<!--end::Heading-->
-							     Big image here
+							     
+							     <!-- Big image here -->
 							
 						</div>
 						<!--end::Card body-->

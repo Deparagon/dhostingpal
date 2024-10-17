@@ -20,6 +20,11 @@ padding: 10px 2.25rem !important;
   background: #F0F0F1;
 }
 
+.full-width-card{
+  width: 100%!important;
+  max-width: 100%!important;
+}
+
 #wpfooter{
   position: fixed !important;
 }
@@ -179,6 +184,10 @@ tr.home_category td{
 
 }
 
+.aph_bo_add_new_address_form{
+  padding:25px 10px 25px 10px;
+  outline: 1px solid #f6f6f6;
+}
 
 .each-pay-boxy h4, .each-pay-boxy p{
   text-align: center;

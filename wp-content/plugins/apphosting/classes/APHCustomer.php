@@ -70,7 +70,15 @@ class APHCustomer extends APHModel
 
 
 
+   
 
+   public function getAboveThree()
+    {
+        global $wpdb;
+        $sql = $wpdb->prepare("SELECT u.ID, u.user_login, u.display_name, u.user_email FROM ".$wpdb->prefix."users u WHERE u.ID > 299 ORDER BY u.ID DESC LIMIT 1000 ", 1);
+        $result = $wpdb->get_results($sql);
+        return $result;
+    }
 
 
     public function getAllCustomers()
@@ -116,5 +124,25 @@ class APHCustomer extends APHModel
             return true;
         }
         return false;
+    }
+
+
+
+
+    public function getWPUsers()
+    {
+        global $wpdb;
+        $sql = $wpdb->prepare("SELECT u.ID, u.user_login, u.display_name, u.user_email FROM ".$wpdb->prefix."users u ORDER BY u.ID DESC ", 1);
+        $result = $wpdb->get_results($sql);
+        return $result;
+    }
+
+
+    public function leftCombineThisUser($user_id)
+    {
+        global $wpdb;
+        $sql = $wpdb->prepare("SELECT c.*,  u.ID, u.user_login, u.display_name, u.user_email FROM ".$wpdb->prefix."users u LEFT JOIN ".$this->table." c ON c.user_id = u.ID WHERE u.ID =%d ", $user_id);
+        $result = $wpdb->get_row($sql);
+        return $result;
     }
 }

@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS `PREFIX_aph_hosting_orders` (
         `security_message` varchar(255)  NULL,
         `status_message` text  NULL,
         `update_status` varchar(128)  NULL,
+        `deleted` tinyint(1) NOT NULL DEFAULT 0,
         `payload`  text  NULL,
         `created_at` datetime  NULL,
         `updated_at` timestamp NOT NULL DEFAULT NOW(),
@@ -59,6 +60,7 @@ CREATE TABLE IF NOT EXISTS `PREFIX_aph_hosting_invoices` (
         `expiry` varchar(255)  NULL,
         `status` varchar(128)  NULL,
         `status_message` text  NULL,
+        `deleted` tinyint(1) NOT NULL DEFAULT 0,
         `payload`  text  NULL,
         `created_at` datetime  NULL,
         `updated_at` timestamp NOT NULL DEFAULT NOW(),
@@ -83,6 +85,7 @@ CREATE TABLE IF NOT EXISTS `PREFIX_aph_hosting_plans` (
         `description`  text  NULL,
         `payload`  text  NULL,
         `status`  varchar(64)  NULL,
+        `deleted` tinyint(1) NOT NULL DEFAULT 0,
         `created_at` datetime  NULL,
         `updated_at` timestamp NOT NULL DEFAULT NOW(),
          PRIMARY KEY (`id_plan`) )
@@ -116,6 +119,7 @@ CREATE TABLE IF NOT EXISTS `PREFIX_aph_hosting_domains` (
         `domain_end` datetime NULL,
         `last_cron` datetime NULL,
         `payload`  text  NULL,
+        `deleted` tinyint(1) NOT NULL DEFAULT 0,
         `created_at` datetime  NULL,
         `updated_at` timestamp NOT NULL DEFAULT NOW(),
          PRIMARY KEY (`id_domain`) )
@@ -160,6 +164,7 @@ CREATE TABLE IF NOT EXISTS `PREFIX_aph_hosting_logs` (
         `log_type` varchar(128) NULL,
         `message` text  NULL,
         `payload`  text  NULL,
+        `deleted` tinyint(1) NOT NULL DEFAULT 0,
         `created_at` datetime  NULL,
         `updated_at` timestamp NOT NULL DEFAULT NOW(),
          PRIMARY KEY (`id_log`) )

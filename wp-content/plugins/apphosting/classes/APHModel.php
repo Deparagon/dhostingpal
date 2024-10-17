@@ -161,10 +161,41 @@ class APHModel
 
 
 
+        public function allWithUsers()
+        {
+            global $wpdb;
+
+            $sql = $wpdb->prepare("SELECT  b.*, U.id, u.user_login, u.display_name, u.user_email FROM ".$wpdb->prefix."users u INNER JOIN  $this->table b ON u.ID = b.user_id ORDER BY ".$this->primaryKey()." DESC ", 1);
+            $result = $wpdb->get_results($sql);
+            return $result;
+        }
+
+
+
+    public function allAndUsers()
+    {
+        global $wpdb;
+
+        $sql = $wpdb->prepare("SELECT  b.*, u.ID, u.user_login, u.display_name, u.user_email FROM ".$wpdb->prefix."users u LEFT JOIN $this->table b   ON u.ID = b.user_id ORDER BY ID DESC ", 1);
+        $result = $wpdb->get_results($sql);
+        return $result;
+    }
+
+
+    public function leftUsers()
+    {
+        global $wpdb;
+        $sql = $wpdb->prepare("SELECT u.ID, u.user_login, u.display_name, u.user_email FROM ".$wpdb->prefix."users u LEFT JOIN  $this->table b ON u.ID = b.user_id ORDER BY u.ID DESC ", 1);
+        $result = $wpdb->get_results($sql);
+        return $result;
+    }
+
+
+
     public function getAll()
     {
         global $wpdb;
-        $sql = $wpdb->prepare("SELECT  b.* FROM $this->table b ORDER BY id_plan DESC ", 1);
+        $sql = $wpdb->prepare("SELECT  b.* FROM $this->table b ORDER BY ".$this->primaryKey()." DESC ", 1);
         $result = $wpdb->get_results($sql);
         return $result;
     }
@@ -209,7 +240,7 @@ class APHModel
         $field = $this->existCheckField();
         $value = $this->filled[$this->existCheckField()];
         global $wpdb;
-        $sql = $wpdb->prepare("SELECT * FROM $this->table WHERE ".$field." = %s  ", $value);
+        $sql = $wpdb->prepare("SELECT * FROM $this->table WHERE deleted = 0 AND ".$field." = %s  ", $value);
         return $wpdb->get_row($sql);
     }
 
@@ -217,7 +248,7 @@ class APHModel
      public function myOwn($id)
      {
          global $wpdb;
-         $sql = $wpdb->prepare("SELECT * FROM $this->table WHERE user_id = %d", $id);
+         $sql = $wpdb->prepare("SELECT * FROM $this->table WHERE deleted = 0 AND user_id = %d", $id);
          return $wpdb->get_results($sql, OBJECT);
      }
 
@@ -226,7 +257,7 @@ class APHModel
      public function latestMine($id, $limit =4)
      {
          global $wpdb;
-         $sql = $wpdb->prepare("SELECT * FROM $this->table WHERE user_id = %d ORDER BY ".$this->primaryKey()." DESC LIMIT ".$limit, $id);
+         $sql = $wpdb->prepare("SELECT * FROM $this->table WHERE deleted = 0 AND user_id = %d ORDER BY ".$this->primaryKey()." DESC LIMIT ".$limit, $id);
          return $wpdb->get_results($sql, OBJECT);
      }
 
@@ -234,7 +265,7 @@ class APHModel
     public function allMine($id)
     {
         global $wpdb;
-        $sql = $wpdb->prepare("SELECT * FROM $this->table WHERE user_id = %d ORDER BY ".$this->primaryKey()." DESC ", $id);
+        $sql = $wpdb->prepare("SELECT * FROM $this->table WHERE deleted = 0 AND user_id = %d ORDER BY ".$this->primaryKey()." DESC ", $id);
         return $wpdb->get_results($sql, OBJECT);
     }
 
@@ -248,7 +279,7 @@ class APHModel
      public function userFirst($id)
      {
          global $wpdb;
-         $sql = $wpdb->prepare("SELECT * FROM $this->table WHERE user_id = %d", $id);
+         $sql = $wpdb->prepare("SELECT * FROM $this->table WHERE deleted = 0 AND user_id = %d", $id);
          $result = $wpdb->get_row($sql, OBJECT);
          return $result;
      }
@@ -257,7 +288,7 @@ class APHModel
      public function countByUserId($id)
      {
          global $wpdb;
-         $sql = $wpdb->prepare("SELECT COUNT(".$this->primaryKey().") FROM $this->table WHERE user_id = %d", $id);
+         $sql = $wpdb->prepare("SELECT COUNT(".$this->primaryKey().") FROM $this->table WHERE deleted = 0 AND user_id = %d", $id);
          return  $wpdb->get_var($sql);
      }
 
@@ -265,7 +296,7 @@ class APHModel
 public function countByStatus($id, $status='Open')
 {
     global $wpdb;
-    $sql = $wpdb->prepare("SELECT COUNT(".$this->primaryKey().") FROM $this->table WHERE user_id = %d AND deleted = %d AND status =%s", $id, 0, $status);
+    $sql = $wpdb->prepare("SELECT COUNT(".$this->primaryKey().") FROM $this->table WHERE deleted = 0 AND user_id = %d AND deleted = %d AND status =%s", $id, 0, $status);
     return  $wpdb->get_var($sql);
 }
 
@@ -279,7 +310,7 @@ public function countByStatus($id, $status='Open')
      public function countAll()
      {
          global $wpdb;
-         $sql = $wpdb->prepare("SELECT COUNT(".$this->primaryKey().") FROM $this->table ");
+         $sql = $wpdb->prepare("SELECT COUNT(".$this->primaryKey().") FROM $this->table WHERE deleted = 0  ");
          return  $wpdb->get_var($sql);
      }
 
@@ -287,7 +318,7 @@ public function countByStatus($id, $status='Open')
      public function countActiveByUserId($id)
      {
          global $wpdb;
-         $sql = $wpdb->prepare("SELECT COUNT(".$this->primaryKey().") FROM $this->table WHERE active = %d AND user_id = %d", 1, $id);
+         $sql = $wpdb->prepare("SELECT COUNT(".$this->primaryKey().") FROM $this->table WHERE deleted = 0 AND active = %d AND user_id = %d", 1, $id);
          return  $wpdb->get_var($sql);
      }
 
@@ -310,7 +341,7 @@ public function countByStatus($id, $status='Open')
     public function getById($id)
     {
         global $wpdb;
-        $sql = $wpdb->prepare("SELECT * FROM $this->table WHERE ".$this->primaryKey()." = %d", $id);
+        $sql = $wpdb->prepare("SELECT * FROM $this->table WHERE deleted = 0 AND ".$this->primaryKey()." = %d", $id);
         $result = $wpdb->get_row($sql, OBJECT);
         return $result;
     }
@@ -320,7 +351,7 @@ public function countByStatus($id, $status='Open')
      public function getByField($field, $value)
      {
          global $wpdb;
-         $sql = $wpdb->prepare("SELECT * FROM $this->table WHERE ".$field." = %s", $value);
+         $sql = $wpdb->prepare("SELECT * FROM $this->table WHERE deleted = 0 AND ".$field." = %s", $value);
          $result = $wpdb->get_row($sql, OBJECT);
          return $result;
      }
@@ -419,4 +450,14 @@ public function countByStatus($id, $status='Open')
     {
         return $this->updateKey($id, 'deleted', 1, "%d");
     }
+
+
+
+     public function LeftCombineAllThisUser($user_id)
+     {
+         global $wpdb;
+         $sql = $wpdb->prepare("SELECT c.*,  u.ID, u.user_login, u.display_name, u.user_email FROM ".$wpdb->prefix."users u LEFT JOIN ".$this->table." c ON c.user_id = u.ID WHERE u.ID =%d ORDER BY u.ID DESC ", $user_id);
+         $result = $wpdb->get_results($sql);
+         return $result;
+     }
 }

@@ -96,7 +96,7 @@ class AppHost_APHBaseField
         if (isset($_GET) && isset($_GET['page'])) {
             $page = esc_html($_GET['page']);
         }
-        if (in_array($page, ['apphosting_settings', 'app_hostplans', 'app_hostcurrencies'])) {
+        if (in_array($page, ['apphosting_settings', 'app_hostplans', 'app_hostcurrencies', 'app_customer_orders', 'app_each_order', 'app_customer_domains', 'app_customer_contacts', 'app_customers', 'app_customer', 'app_catch_all'])) {
             add_action('admin_enqueue_scripts', array($this, 'adminScripts'));
         }
 

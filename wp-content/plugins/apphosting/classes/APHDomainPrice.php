@@ -126,6 +126,8 @@ class APHDomainPrice extends APHModel
        global $wpdb;
        preg_match('/\.([a-z]+(\.[a-z]+)*)$/', $domain, $matches);
        $tld = $matches[1];
+       $tld = '.'.$tld;
+
        $sql = $wpdb->prepare("SELECT $price_type FROM $this->table WHERE active =%d  AND tld =%s", 1, $tld);
        return $wpdb->get_var($sql);
    }

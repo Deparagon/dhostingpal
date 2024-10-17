@@ -232,7 +232,7 @@ class APHDomain extends APHModel
             }
 
 
-            print_r(InternetBS::api()->accountPriceListGet('USD'));
+            //print_r(InternetBS::api()->accountPriceListGet('USD'));
         } catch (Exception $e) {
             APHLogger::log('Domain check failed with error '.$e->getMessage(), 'Domain Check');
             return ['status'=>'NK', 'available'=>'No', 'message'=>$e->getMessage()];

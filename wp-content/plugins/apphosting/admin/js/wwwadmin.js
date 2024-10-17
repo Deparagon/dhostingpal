@@ -96,6 +96,77 @@ $('body').on('click', '.ap_edit_object_plan_btn', function(ev){
 	});
 //continued
 
+
+
+// ORDERING BACKEND
+
+	$('body').on('click', '#app_review_order_button', function(ev){
+		      ev.preventDefault();
+		  let btn = $(this);
+		  let btn_name = btn.html();
+		   btn.html(btn_name + all_place_spin).prop('disabled', true);
+
+          let req_data = $('#ap_modal_create_order_form').serialize()+'&action=manageHostingOrders&request_token=APKJNRJWLGGDFTUETTDIWRXGGGHEELOFJWIVMTLLFMPRBTQOCXXXUQUFFQGJWHZM';
+		   $.ajax({
+		   	   url:ajaxurl,
+		   	   type:'post',
+		   	   dataType:'json',
+		   	   data:req_data,
+		   	   success:function(report){
+		   	   	 btn.html(btn_name).prop('disabled', false);
+                  if(report.status =='OK'){
+                      popNotification(report.message, 'success');
+                      $('#ajax_return_values_innerline').html(report.contents);
+                  }
+                  else{
+                  	popNotification(report.message, 'error');
+                  }
+		   	   },
+		   	   error:function(report){
+		   	   	      btn.html(btn_name).prop('disabled', false);
+                      popNotification(report.responseText, 'error');
+		   	   }
+		   })
+
+	});
+
+
+
+	$('body').on('click', '#ap_create_new_order', function(ev){
+		      ev.preventDefault();
+		  let btn = $(this);
+		  let btn_name = btn.html();
+		   btn.html(btn_name + all_place_spin).prop('disabled', true);
+
+          let req_data = $('#ap_modal_create_order_form').serialize()+'&action=manageHostingOrders&request_token=APNOLSBPAJWRLKTPCFCGTXARACZSKALILUTUJNMATOAABXNGDPVVLIWOUXUNTFXB';
+		   $.ajax({
+		   	   url:ajaxurl,
+		   	   type:'post',
+		   	   dataType:'json',
+		   	   data:req_data,
+		   	   success:function(report){
+		   	   	 btn.html(btn_name).prop('disabled', false);
+                  if(report.status =='OK'){
+                      popNotification(report.message, 'success');
+                      $('#ajax_return_values_innerline').html(report.contents);
+                  }
+                  else{
+                  	popNotification(report.message, 'error');
+                  }
+		   	   },
+		   	   error:function(report){
+		   	   	      btn.html(btn_name).prop('disabled', false);
+                      popNotification(report.responseText, 'error');
+		   	   }
+		   })
+
+	});
+
+
+
+
+
+
 $('body').on('click', '.button_open_new_c_form', function(){
     $('#hidden_add_new_currency_form').toggleClass('display_none');
 });
@@ -174,21 +245,40 @@ $('body').on('click', '.go_to_page_by_click', function(ev){
 });
 
 
-$('body').on('click', '.edit_each_page', function(ev){
+$('body').find('.aph_account_menu_item').addClass('display_none');
+$('body').find('.over_view_box').removeClass('display_none');
+
+$('body').on('click', '.nav-link', function(){
+	let thelink = $(this).data('link');
+	$('.nav-link').removeClass('active');
+	$(this).addClass('active');
+
+   $('body').find('.aph_account_menu_item').addClass('display_none');
+   $('body').find('.'+thelink).removeClass('display_none');
+});
+
+
+
+// CUSTOMER ADMIN PAGE 
+
+$('body').on('click', '#save_customer_new_address', function(ev){
 	  ev.preventDefault();
 
+	  let formaddress = $('#aph_modal_add_address_form').serialize()+'&action=manageHostingCustomer&request_token=APOCREOZIGNXFPVEPCOLSCYHPIXCPCPCKRCDPKDXKXVAOWKBXKUSRQFKZSABYSFY';
+         console.log(formaddress);
+         let btn = $(this);
+         let btn_name = btn.html();
+         btn.html('Loading.......');
 	  $.ajax({
-	  	 url:'/admin/page/'+$(this).data('page_id'),
-	  	 data:{page_id:$(this).data('page_id')},
+	  	 url:ajaxurl,
+	  	 data:formaddress,
 	  	 dataType:'json',
-	  	 type:'get',
+	  	 type:'post',
 	  	 success:function(report){
+	  	 	btn.html(btn_name);
 	  	 	if(report.status=='OK'){
-	  	 		$('.blank_modal_body_form').html(report.contents);
-	  	 		$('.blank_modal_title').html(report.title);
-	  	 		$('#kt_blank_modal_general_purpose').modal('show');
-	  	 		 runShowHideLang();
-	  	 		 makeEditorText();
+	  	 		popNotification(report.message, 'success','Close');
+	  	 		window.location.reload();
 	  	 	}
 	  	 	else{
 	  	 		popNotification(report.message, 'error', 'Close');
@@ -196,6 +286,7 @@ $('body').on('click', '.edit_each_page', function(ev){
 
 	  	 },
 	  	 error:function(report){
+	  	 	btn.html(btn_name);
                  popNotification(report.responseText, 'error', 'OK');
 	  	 }
 
@@ -207,20 +298,20 @@ $('body').on('click', '.edit_each_page', function(ev){
 
 
 
-$('body').on('click', '.edit_each_plain_text_object', function(ev){
+$('body').on('click', '.delete_object_action_call', function(ev){
 	  ev.preventDefault();
-	   let ajaxurl = $(this).prop('href')
+	   let rowline = $(this).parents('tr');
+	   let reqcontent = {object:$(this).data('object'), id: $(this).data('object_id'), 'action':'manageHostingCustomer', 'request_token':'APYEWTKZCAPESLRBLICIRSFZDUHQVZSSVQPZRKAAPHCORESJSKMDFIDZJNSPGWGV'};
 
 	  $.ajax({
 	  	 url:ajaxurl,
 	  	 dataType:'json',
-	  	 type:'get',
+	  	 data:reqcontent,
+	  	 type:'post',
 	  	 success:function(report){
 	  	 	if(report.status=='OK'){
-	  	 		$('.blank_modal_body_form').html(report.contents);
-	  	 		$('.blank_modal_title').html(report.title);
-	  	 		$('#kt_blank_modal_general_purpose').modal('show');
-	  	 		 runShowHideLang();
+	  	 		popNotification(report.message, 'success', 'OK');
+	  	 		rowline.remove();
 	  	
 	  	 	}
 	  	 	else{
@@ -237,18 +328,19 @@ $('body').on('click', '.edit_each_plain_text_object', function(ev){
 });
 
 
-$('body').on('keyup', '.search_object_display_result', function(ev){
-      if( $(this).val().length >2){
-       let named = $(this).data('object');
+$('body').on('click', '#aph_save_update_customer_details', function(ev){
+	                ev.preventDefault();
+      
+       let customerdata = $('#aph_save_customer_details_form').serialize()+'&action=manageHostingCustomer&request_token=APPMHNOQAORYYVRTWZVRIJLVYPSCAWLJYUEYOVXKBEUJJRBUVERQHGLNDIEEESWS';
       	$.ajax({
-      		 url:'/admin/'+named+'-search',
-      		 data:{'search_term':$(this).val()},
+      		 url:ajaxurl,
+      		 data:customerdata,
       		 dataType:'json',
-      		 type:'get',
+      		 type:'post',
       		 success:function(report){
 
       		 	if(report.status=='OK'){
-      		 		$('#searchable_tbody_contents').html(report.contents);
+      		 		popNotification(report.message, 'success', 'OK');
       		 	}
       		 	else{
       		 		popNotification(report.message, 'error', 'Close');
@@ -259,8 +351,39 @@ $('body').on('keyup', '.search_object_display_result', function(ev){
                     popNotification(report.responseText, 'error', 'Close');
       		 }
       	})
-      }
+      
 });
+
+
+$('body').on('submit', '#ap_modal_create_customer_form', function(ev){
+	                ev.preventDefault();
+      
+       let customerdata = $('#ap_modal_create_customer_form').serialize()+'&action=manageHostingCustomers&request_token=APSIUOGNCYSRHUARXNRRHIACQUMMBKKRTZOACXEFBPCHWJITWYJTFJOVIQTLKGGE';
+      	$.ajax({
+      		 url:ajaxurl,
+      		 data:customerdata,
+      		 dataType:'json',
+      		 type:'post',
+      		 success:function(report){
+
+      		 	if(report.status=='OK'){
+      		 		popNotification(report.message, 'success', 'OK');
+      		 	}
+      		 	else{
+      		 		popNotification(report.message, 'error', 'Close');
+      		 	}
+
+      		 },
+      		 error:function(report){
+                    popNotification(report.responseText, 'error', 'Close');
+      		 }
+      	})
+      
+});
+
+
+
+
 
 $('body').on('click', '.delete_object_row', function(ev){
 	  ev.preventDefault();
