@@ -27,6 +27,7 @@ class APHDeleteBadAccounts
 
      public function thePage()
      {
+        require_once plugin_dir_path(dirname(__FILE__)).'classes/APHCustomer.php';
         
         $users_deleted = [];
         $obju = new APHCustomer();
