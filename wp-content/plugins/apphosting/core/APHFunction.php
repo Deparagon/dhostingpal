@@ -13,6 +13,7 @@ class APHFunction
         add_action('after_setup_theme', array($this, 'removeBarAction'));
         add_filter('wp_mail', array($this, 'doEmailLoginProcess'));
         add_action('init', array($this, 'redirectToNewLoginPage'));
+        add_action( 'register_post', array($this, 'checkRegistrationFieldsForSpam'), 10, 3 );
     }
 
 
@@ -23,6 +24,20 @@ class APHFunction
             show_admin_bar(false);
         }
     }
+
+
+
+
+public function checkRegistrationFieldsForSpam( $username, $email, $errors ) {
+   
+    if(strpos($username, 'EURO BINANCE')  !==false   || strpos($username, 'USD BINANCE') !==false || strpos($username, 'btc')  !== false) {
+        $errors->add('username_length', 'Username has some old characters, try again');
+        file_put_contents(dirname(__FILE__).'/logs/failed_reg.txt', date('Y-m-d H:i:s').' USERNAME: '.$username.'  EMAIL: '.$email."\n\n\n", FILE_APPEND);
+    }
+
+
+    return $errors; 
+}
 
 
     public function redirectToNewLoginPage()
