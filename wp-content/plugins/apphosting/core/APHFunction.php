@@ -32,7 +32,7 @@ public function checkRegistrationFieldsForSpam( $username, $email, $errors ) {
    
     if(strpos($username, 'BINANCE')  !==false || strpos($username, 'MEXC')  !==false || strpos($username, 'SOL')  !==false||strpos($username, '  USD ') !==false  || strpos($username, 'EURO') !==false  || strpos($username, 'KUCOIN') !==false || strpos($username, 'USD BYBIT') !==false  || strpos($username, 'USD BINANCE') !==false || strpos($username, 'XRP')  !== false) {
         $errors->add('username_length', 'Username has some old characters, try again');
-        file_put_contents(dirname(__FILE__).'/logs/failed_reg.txt', date('Y-m-d H:i:s').' USERNAME: '.$username.'  EMAIL: '.$email."\n\n\n", FILE_APPEND);
+        file_put_contents(dirname(__FILE__).'/../logs/failed_reg.txt', date('Y-m-d H:i:s').' USERNAME: '.$username.'  EMAIL: '.$email."\n\n\n", FILE_APPEND);
     }
 
 
