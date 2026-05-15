@@ -1,5 +1,6 @@
 # Ignore everything
 *
+wp-config.php
 
 # But not these files...
 !.gitignore
