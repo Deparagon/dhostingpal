@@ -542,3 +542,240 @@ function app_hosting_scripts_loader() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'app_hosting_scripts_loader' );
+if ( ! function_exists( 'dws_estimated_read_time' ) ) {
+    function dws_estimated_read_time( $post_id = null, $wpm = 220 ) {
+        if ( null === $post_id ) {
+            $post_id = get_the_ID();
+        }
+
+        if ( ! $post_id ) {
+            return 1;
+        }
+
+        $content = get_post_field( 'post_content', $post_id );
+        $word_count = str_word_count( wp_strip_all_tags( (string) $content ) );
+        $minutes = max( 1, (int) ceil( $word_count / max( 1, (int) $wpm ) ) );
+
+        return $minutes;
+    }
+}
+
+if ( ! function_exists( 'dws_render_category_badges' ) ) {
+    function dws_render_category_badges( $post_id = null, $additional_class = '' ) {
+        if ( null === $post_id ) {
+            $post_id = get_the_ID();
+        }
+
+        if ( ! $post_id ) {
+            return '';
+        }
+
+        $categories = get_the_category( $post_id );
+
+        if ( empty( $categories ) || is_wp_error( $categories ) ) {
+            return '';
+        }
+
+        $items = array();
+        foreach ( $categories as $category ) {
+            $classes = trim( 'dws-pill ' . $additional_class );
+            $items[] = sprintf(
+                '<a class="%1$s" href="%2$s">%3$s</a>',
+                esc_attr( $classes ),
+                esc_url( get_category_link( $category ) ),
+                esc_html( $category->name )
+            );
+        }
+
+        return implode( '', $items );
+    }
+}
+
+if ( ! function_exists( 'dws_safe_excerpt' ) ) {
+    function dws_safe_excerpt( $post_id = null, $length = 32 ) {
+        if ( null === $post_id ) {
+            $post_id = get_the_ID();
+        }
+
+        if ( ! $post_id ) {
+            return '';
+        }
+
+        $excerpt = get_post_field( 'post_excerpt', $post_id );
+        if ( empty( $excerpt ) ) {
+            $excerpt = get_post_field( 'post_content', $post_id );
+        }
+
+        $excerpt = wp_strip_all_tags( (string) $excerpt );
+        $excerpt = trim( preg_replace( '/\s+/', ' ', $excerpt ) );
+
+        if ( '' === $excerpt ) {
+            return '';
+        }
+
+        $words = explode( ' ', $excerpt );
+        if ( count( $words ) > $length ) {
+            $excerpt = implode( ' ', array_slice( $words, 0, $length ) ) . '…';
+        }
+
+        return $excerpt;
+    }
+}
+
+
+if ( ! function_exists( 'dws_get_schema_logo_url' ) ) {
+    function dws_get_schema_logo_url() {
+        return get_template_directory_uri() . '/assets/media/logos/dws.png';
+    }
+}
+
+if ( ! function_exists( 'dws_get_schema_description' ) ) {
+    function dws_get_schema_description( $fallback = '' ) {
+        $description = get_bloginfo( 'description' );
+
+        if ( '' === trim( (string) $description ) ) {
+            $description = $fallback;
+        }
+
+        if ( '' === trim( (string) $description ) ) {
+            $description = __( 'Domains, hosting, and managed web services for businesses launching online.', 'app-hosting' );
+        }
+
+        return wp_strip_all_tags( $description );
+    }
+}
+
+if ( ! function_exists( 'dws_output_json_ld' ) ) {
+    function dws_output_json_ld( $schema ) {
+        if ( empty( $schema ) ) {
+            return;
+        }
+
+        echo '<script type="application/ld+json">' . wp_json_encode( $schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>' . "\n";
+    }
+}
+
+if ( ! function_exists( 'dws_public_schema' ) ) {
+    function dws_public_schema() {
+        if ( is_admin() || is_feed() ) {
+            return;
+        }
+
+        global $wp;
+
+        $site_name    = get_bloginfo( 'name' );
+        $home_url     = home_url( '/' );
+        $logo_url     = dws_get_schema_logo_url();
+        $description  = dws_get_schema_description();
+        $organization = array(
+            '@type' => 'Organization',
+            '@id'   => $home_url . '#organization',
+            'name'  => $site_name,
+            'url'   => $home_url,
+            'logo'  => array(
+                '@type' => 'ImageObject',
+                'url'   => $logo_url,
+            ),
+            'sameAs' => array(
+                home_url( '/' ),
+            ),
+        );
+        $website      = array(
+            '@type'       => 'WebSite',
+            '@id'         => $home_url . '#website',
+            'url'         => $home_url,
+            'name'        => $site_name,
+            'description' => $description,
+            'publisher'   => array(
+                '@id' => $home_url . '#organization',
+            ),
+            'potentialAction' => array(
+                '@type'       => 'SearchAction',
+                'target'      => home_url( '/?s={search_term_string}' ),
+                'query-input' => 'required name=search_term_string',
+            ),
+        );
+        $graph        = array( $organization, $website );
+
+        if ( is_front_page() ) {
+            $graph[] = array(
+                '@type'       => 'WebPage',
+                '@id'         => $home_url . '#webpage',
+                'url'         => $home_url,
+                'name'        => $site_name,
+                'description' => $description,
+                'isPartOf'    => array(
+                    '@id' => $home_url . '#website',
+                ),
+                'about'       => array(
+                    '@id' => $home_url . '#organization',
+                ),
+            );
+        } elseif ( is_home() || is_archive() ) {
+            $archive_url = is_home() && get_option( 'page_for_posts' ) ? get_permalink( get_option( 'page_for_posts' ) ) : home_url( add_query_arg( array(), isset( $wp->request ) ? $wp->request : '' ) );
+            $graph[]     = array(
+                '@type'       => 'Blog',
+                '@id'         => trailingslashit( $archive_url ) . '#blog',
+                'url'         => $archive_url,
+                'name'        => wp_get_document_title(),
+                'description' => dws_get_schema_description( __( 'Articles and guides about domains, hosting, DNS, WordPress, Laravel, ecommerce, and web operations.', 'app-hosting' ) ),
+                'publisher'   => array(
+                    '@id' => $home_url . '#organization',
+                ),
+                'isPartOf'    => array(
+                    '@id' => $home_url . '#website',
+                ),
+            );
+        } elseif ( is_singular( 'post' ) ) {
+            $post_id       = get_the_ID();
+            $thumbnail_url = get_the_post_thumbnail_url( $post_id, 'full' );
+            $article       = array(
+                '@type'            => 'BlogPosting',
+                '@id'              => get_permalink( $post_id ) . '#article',
+                'mainEntityOfPage' => get_permalink( $post_id ),
+                'headline'         => wp_strip_all_tags( get_the_title( $post_id ) ),
+                'description'      => dws_safe_excerpt( $post_id, 35 ),
+                'datePublished'    => get_the_date( DATE_W3C, $post_id ),
+                'dateModified'     => get_post_modified_time( DATE_W3C, false, $post_id ),
+                'author'           => array(
+                    '@type' => 'Person',
+                    'name'  => get_the_author_meta( 'display_name', (int) get_post_field( 'post_author', $post_id ) ),
+                    'url'   => get_author_posts_url( (int) get_post_field( 'post_author', $post_id ) ),
+                ),
+                'publisher'        => array(
+                    '@id' => $home_url . '#organization',
+                ),
+            );
+
+            if ( $thumbnail_url ) {
+                $article['image'] = array( $thumbnail_url );
+            }
+
+            $graph[] = $article;
+        } elseif ( is_page() ) {
+            $post_id = get_the_ID();
+            $graph[] = array(
+                '@type'        => 'WebPage',
+                '@id'          => get_permalink( $post_id ) . '#webpage',
+                'url'          => get_permalink( $post_id ),
+                'name'         => wp_strip_all_tags( get_the_title( $post_id ) ),
+                'description'  => has_excerpt( $post_id ) ? wp_strip_all_tags( get_the_excerpt( $post_id ) ) : dws_get_schema_description(),
+                'dateModified' => get_post_modified_time( DATE_W3C, false, $post_id ),
+                'isPartOf'     => array(
+                    '@id' => $home_url . '#website',
+                ),
+                'publisher'    => array(
+                    '@id' => $home_url . '#organization',
+                ),
+            );
+        }
+
+        dws_output_json_ld(
+            array(
+                '@context' => 'https://schema.org',
+                '@graph'   => $graph,
+            )
+        );
+    }
+}
+add_action( 'wp_head', 'dws_public_schema', 20 );
