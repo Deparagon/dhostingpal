@@ -152,4 +152,5 @@ $recent_posts  = new WP_Query(
 	</section>
 </main>
 
+<?php $GLOBALS['dws_public_footer'] = true; ?>
 <?php get_footer(); ?>

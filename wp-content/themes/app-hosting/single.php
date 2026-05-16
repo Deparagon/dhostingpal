@@ -44,10 +44,17 @@ get_header();
 							<strong><?php the_author(); ?></strong>
 							<span><?php echo esc_html( get_the_author_meta( 'description' ) ? get_the_author_meta( 'description' ) : __( 'Domains & Web Service Team', 'app-hosting' ) ); ?></span>
 						</div>
-						<?php if ( has_tag() ) : ?>
+						<?php
+						$post_tags = get_the_tags();
+						if ( $post_tags ) :
+							?>
 							<div class="dws-tag-list">
 								<strong><?php esc_html_e( 'Tagged', 'app-hosting' ); ?></strong>
-								<?php the_tags( '<div>', '', '</div>' ); ?>
+								<div class="dws-tag-badges">
+									<?php foreach ( $post_tags as $post_tag ) : ?>
+										<a class="dws-tag-badge" href="<?php echo esc_url( get_tag_link( $post_tag ) ); ?>"><?php echo esc_html( $post_tag->name ); ?></a>
+									<?php endforeach; ?>
+								</div>
 							</div>
 						<?php endif; ?>
 					</aside>
@@ -90,4 +97,5 @@ get_header();
 	<?php get_template_part( 'template-parts/site/public-cta' ); ?>
 </main>
 
+<?php $GLOBALS['dws_public_footer'] = true; ?>
 <?php get_footer(); ?>

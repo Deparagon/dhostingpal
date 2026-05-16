@@ -56,4 +56,5 @@ get_header();
 	<?php get_template_part( 'template-parts/site/public-cta' ); ?>
 </main>
 
+<?php $GLOBALS['dws_public_footer'] = true; ?>
 <?php get_footer(); ?>
