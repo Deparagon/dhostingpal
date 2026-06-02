@@ -1,21 +1,24 @@
-# Ignore everything
+# Ignore all WordPress files by default.
 *
-wp-config.php
 
-# But not these files...
+# Keep Git able to traverse directories so nested allow-rules can match.
+!*/
+
+# Keep repository metadata tracked.
 !.gitignore
-#!.htaccess
-#!wp-config.php
-# etc...
 
-# ...even if they are in subdirectories
-#!*/
+# Keep sensitive/local WordPress configuration ignored.
+wp-config.php
 .htaccess
 
-# if the files to be tracked are in subdirectories
-!*/wp-content/plugins/apphosting/*
-!*/wp-content/themes/app-hosting/*
-!*/wp-content/plugins/apphosting/logs/index.php
-!*/wp-content/plugins/apphosting/icons/index.php
-!*/wp-content/plugins/apphosting/admin/*
+# Track only the custom apphosting plugin.
+!wp-content/
+!wp-content/plugins/
+!wp-content/plugins/apphosting/
+!wp-content/plugins/apphosting/**
+
+# Track only the custom app-hosting theme.
+!wp-content/themes/
+!wp-content/themes/app-hosting/
+!wp-content/themes/app-hosting/**
 
