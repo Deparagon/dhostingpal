@@ -27,17 +27,20 @@ get_header();
 				endwhile;
 				?>
 			</div>
-			<div class="dws-pagination">
-				<?php
-				the_posts_pagination(
-					array(
-						'mid_size'  => 2,
-						'prev_text' => esc_html__( 'Newer', 'app-hosting' ),
-						'next_text' => esc_html__( 'Older', 'app-hosting' ),
-					)
-				);
+			<?php
+			$pagination = get_the_posts_pagination(
+				array(
+					'mid_size'  => 2,
+					'prev_text' => esc_html__( 'Newer', 'app-hosting' ),
+					'next_text' => esc_html__( 'Older', 'app-hosting' ),
+				)
+			);
+			if ( $pagination ) :
 				?>
-			</div>
+				<div class="dws-pagination">
+					<?php echo $pagination; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+				</div>
+			<?php endif; ?>
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 		<?php endif; ?>
