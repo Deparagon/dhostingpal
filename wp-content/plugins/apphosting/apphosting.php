@@ -15,7 +15,6 @@ Domain Path: /langs/
 */
 
 
-
 if (!defined('ABSPATH')) {
     exit;
 }
